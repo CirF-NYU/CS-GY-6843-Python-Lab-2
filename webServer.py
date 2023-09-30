@@ -17,7 +17,7 @@ def webServer(port=13331):
     #Establish the connection
 
     print('Ready to serve...')
-    connectionSocket, addr = serverSocket.accept()
+    connectionSocket, addr = connectionSocket.accept()
 
     try:
       message = serverSocket.recv(1024).decode()
