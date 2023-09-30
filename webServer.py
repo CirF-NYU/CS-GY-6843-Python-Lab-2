@@ -17,10 +17,10 @@ def webServer(port=13331):
     #Establish the connection
 
     print('Ready to serve...')
-    connectionSocket, addr = connectionSocket.accept()
+    connectionSocket, addr = serverSocket.accept()
 
     try:
-      message = serverSocket.recv(1024).decode()
+      message = connectionSocket.recv(1024).decode()
       filename = message.split()[1]
 
       #opens the client requested file.
